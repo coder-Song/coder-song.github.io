@@ -1,0 +1,139 @@
+# 目录显示
+toc:
+  list_number: true #显示编号
+  max_depth: 6 #生成TOC的最大深度
+  min_depth: 1 #生成TOC的最小深度
+  placeholder: 很遗憾，您还没开始动笔哦！ #占位符
+  collapse: false  # 折叠-隐藏层级目录 
+
+# 编辑链接 -开启后，文章页面标题旁显示编辑图标，点击后跳转到编辑页面
+        #url-文章所在地址-仓库跳转链接
+post_edit:
+  enable: true
+  url: http://github.com/coder-Song/coder-song.github.io/source/
+
+# 代码高亮
+highlight:
+  enable: false # 关闭 highlight
+prismjs:      # 启用 prism
+  enable: true
+  preprocess: true
+  line_number: false
+  tab_replace: ''
+
+# 代码块
+codeblock:
+  copy_btn: true #一键复制按钮
+
+
+# 图片懒加载-默认开启，将会为Markdown图片img加上loading="lazy"属性
+lazyload:
+  enable:true
+
+#文章分享版权
+creative_commons:
+  license: by-nc-sa #设置证书
+  language: deed.zh #设置语言
+  post: true        #在每篇文章末尾显示
+  clipboard: true   #在剪切板中追加版权信息
+
+
+
+
+
+#主题色
+colors:
+  primary: '#6200ee'
+ 
+  #背景色
+  # bg: "#F5F5F5"
+  selection_bg: '#8e71c1' # 选取文字时的背景色
+
+  # 标签云中标签的起始色和结束色
+   #tag_start_color:
+  # tag_end_color:
+
+#标签颜色
+tags:
+  Vue: '#4fc08d'
+  Hexo: '#0E834D'
+  CSS: '#5298d1'
+  Node.js: '#026E00'
+  Git: '#F14E32'
+  React: '#61dafb'
+  Python: '#3776ab'
+  PHP: '#8892BF'
+  VS Code: '#0066B8'
+  JavaScript: '#F4DF4F'
+  TypeScript: '#317AC6'
+  Laravel: '#F4645F'
+
+#分类颜色
+categories:
+  笔记: dimgray
+
+mode: dark
+
+#头部资源
+head:
+  css:
+    custom: /css/custom.css
+
+#网站图标
+favicon: /favicon.svg
+
+avatar:
+  url: images/rush.jpg
+  status:
+    enable: true
+    message: Looking for dawn.
+
+# 打赏
+reward:
+  enable: true
+  comment: 让进步发生
+  methods:
+    - name: 支付宝
+      path: images/Alipay.jpg
+      color: "#00A3EE"
+      icon: ri:alipay-line
+    - name: 微信支付
+      path: images/WeChat.jpg
+      color: "#2DC100"
+      icon: ri:wechat-pay-line
+
+github_issues:
+  enable: false
+
+github_discussions:
+  enable: false
+
+engine_search:
+  enable: false
+
+say:
+  api: https://el-bot-api.vercel.app/api/words/young
+  hitokoto:
+    enable: false
+
+#社交
+social:
+  - name: GitHub
+    link: https://github.com/coder-Song
+    icon: ri:github-line
+    color: "#6e5494"
+  - name: NeteaseMusic
+    link: https://music.163.com/#/user/home?id=8774966028
+    icon: ri:netease-cloud-music-line
+    color: "#C20C0C"
+  - name: E-Mail
+    link: sun.guogee@outlook.com
+    icon: ri:mail-line
+    color: "#8E71C1"
+
+
+
+iconify:
+  global: true
+
+medium_zoom: true
