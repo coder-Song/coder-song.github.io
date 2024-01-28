@@ -1,3 +1,228 @@
+mode: auto #模式：dark
+
+#头像
+avatar:
+  url: images/rush.jpg
+  status:
+    enable: true
+    emoji: 🌑
+    message: Looking for dawn.
+
+# 打赏
+reward:
+  enable: true
+  comment: 感谢您的 精准扶贫
+  methods:
+    - name: 微信
+      path: images/WeChat.jpg
+      color: "#2DC100"
+      icon: ri:wechat-pay-line
+    - name: 支付宝
+      path: images/Alipay.jpg
+      color: "#00A3EE"
+      icon: ri:alipay-line
+
+#主题色
+colors:
+  primary: '#6200ee'
+ 
+  #背景色
+  bg: '#F5F5F5'
+  selection_bg: '#8e71c1' # 选取文字时的背景色
+
+  # 标签云中标签的起始色和结束色
+  tag_start_color: '#F5F5F5'
+  tag_end_color: '#6200ee'
+
+#标签色
+tags:
+  Vue: '#4fc08d'
+  Hexo: '#0E834D'
+  CSS: '#5298d1'
+  Node.js: '#026E00'
+  Git: '#F14E32'
+  React: '#61dafb'
+  Python: '#3776ab'
+  PHP: '#8892BF'
+  VS Code: '#0066B8'
+  JavaScript: '#F4DF4F'
+  TypeScript: '#317AC6'
+  Laravel: '#F4645F'
+
+#分类颜色
+categories: #默认色 #333
+  笔记: dimgray
+
+
+#头部资源-加载自定义资源
+head:
+  css:
+    custom: /css/custom.css
+
+  js:
+    base:
+      - xxx
+    async:
+      # 默认引入的图标资源，使用 iconfont
+      iconfont: //at.alicdn.com/t/font_1140697_dxory92pb0h.js
+    defer:
+  
+  #CDN    
+  cdn:
+    pre: https://cdn.jsdelivr.net/gh/coderSong/coder-song.github.io@latest
+    
+    #覆盖iconfont
+    js:
+      async:
+         iconfont: 
+
+#网站图标-放在source文件夹下
+favicon: /favicon.svg 
+
+
+
+# 预加载
+preload:
+  style:
+    - /css/hexo-theme-yun.css
+  script:
+    - /js/hexo-theme-yun.js
+
+prefetch:
+  script:
+    - /js/sidebar.js
+
+dns_prefetch:
+  - https://cos.yunyoujun.cn
+
+# do more(TCP handshake...) than dns-fetch
+preconnect:
+  - https://cdn.jsdelivr.net
+
+
+comment:
+  candidates:
+    - waline
+    # - giscus
+  tips:
+    - 如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/YunYouJun/yunyoujun.github.io/discussions" target="_blank">GitHub Discussions</a> 与我交流。
+
+#不能照抄
+waline:
+  enable: true
+  serverURL: https://waline.yunyoujun.cn
+  visitor: true
+  comment: true
+  emoji:
+  locale:
+    placeholder: 填写邮箱，可以收到回复通知哦～
+  requiredMeta: [nick]
+#-------
+
+github_issues:
+  enable: false
+
+github_discussions:
+  enable: false
+
+engine_search:
+  enable: false
+
+disqusjs:
+  enable: false
+  shortname: yunyoujun
+  apikey: ouoGQCaamOKdJgyZU5DKcpFnRIg3SNzvk0nwygPtlcTRJuE68c8igvrZGW4wAJoN
+
+# https://github.com/laymonage/giscus
+giscus:
+  enable: false
+  repo: YunYouJun/yunyoujun.github.io
+  repo-id:
+  category-id:
+  mapping: pathname
+  reactions-enabled: 1
+  emit-metadata: 0
+  theme: light
+
+footer:
+  since: 2016
+  icon:
+    url: https://sponsors.coder-song.cn
+    title: coder-song的赞助者们
+  beian:
+    enable: true
+    icp: 苏ICP备17038157号
+  support:
+    enable: true
+    title: 又拍云
+    link: https://www.upyun.com
+    logo: https://cdn.yunyoujun.cn/img/logo/upyun-logo.png
+    prefix: 本网站由
+    suffix: 提供 CDN 加速
+  custom_text:
+
+
+
+# If you want to use it, you need config algolia appID in _config.yml!!!
+# https://github.com/oncletom/hexo-algolia
+
+
+google_analytics:
+  enable: true
+  id: G-1LL0D86CY9
+
+google_adsense:
+  enable: true
+  client: ca-pub-2245427233262012
+
+post_edit:
+  enable: true
+  url: https://github.com/YunYouJun/yunyoujun.github.io/tree/hexo/source/
+
+albums:
+  enable: true
+
+menu:
+  custom:
+    title: 留言板
+    path: /about/#comment
+    icon: ri:clipboard-line
+
+cursor:
+  enable: true
+
+baidu_push: true
+
+google_tagmanager:
+  enable: true
+  id: GTM-M9KWR9L
+
+
+#社交
+social:
+  - name: GitHub
+    link: https://github.com/coder-Song
+    icon: ri:github-line
+    color: "#6e5494"
+  - name: NeteaseMusic
+    link: https://music.163.com/#/user/home?id=8774966028
+    icon: ri:netease-cloud-music-line
+    color: "#C20C0C"
+  - name: E-Mail
+    link: sun.guogee@outlook.com
+    icon: ri:mail-line
+    color: "#8E71C1"
+# pjax:
+#   enable: true
+
+
+iconify:
+  global: true
+
+medium_zoom: true
+
+
+#######页面配置########
 # 目录显示
 toc:
   list_number: true #显示编号
@@ -6,11 +231,8 @@ toc:
   placeholder: 很遗憾，您还没开始动笔哦！ #占位符
   collapse: false  # 折叠-隐藏层级目录 
 
-# 编辑链接 -开启后，文章页面标题旁显示编辑图标，点击后跳转到编辑页面
-        #url-文章所在地址-仓库跳转链接
-post_edit:
-  enable: true
-  url: http://github.com/coder-Song/coder-song.github.io/source/
+
+# 编辑链接 
 
 # 代码高亮
 highlight:
@@ -36,104 +258,3 @@ creative_commons:
   language: deed.zh #设置语言
   post: true        #在每篇文章末尾显示
   clipboard: true   #在剪切板中追加版权信息
-
-
-
-
-
-#主题色
-colors:
-  primary: '#6200ee'
- 
-  #背景色
-  # bg: "#F5F5F5"
-  selection_bg: '#8e71c1' # 选取文字时的背景色
-
-  # 标签云中标签的起始色和结束色
-   #tag_start_color:
-  # tag_end_color:
-
-#标签颜色
-tags:
-  Vue: '#4fc08d'
-  Hexo: '#0E834D'
-  CSS: '#5298d1'
-  Node.js: '#026E00'
-  Git: '#F14E32'
-  React: '#61dafb'
-  Python: '#3776ab'
-  PHP: '#8892BF'
-  VS Code: '#0066B8'
-  JavaScript: '#F4DF4F'
-  TypeScript: '#317AC6'
-  Laravel: '#F4645F'
-
-#分类颜色
-categories:
-  笔记: dimgray
-
-mode: dark
-
-#头部资源
-head:
-  css:
-    custom: /css/custom.css
-
-#网站图标
-favicon: /favicon.svg
-
-avatar:
-  url: images/rush.jpg
-  status:
-    enable: true
-    message: Looking for dawn.
-
-# 打赏
-reward:
-  enable: true
-  comment: 让进步发生
-  methods:
-    - name: 支付宝
-      path: images/Alipay.jpg
-      color: "#00A3EE"
-      icon: ri:alipay-line
-    - name: 微信支付
-      path: images/WeChat.jpg
-      color: "#2DC100"
-      icon: ri:wechat-pay-line
-
-github_issues:
-  enable: false
-
-github_discussions:
-  enable: false
-
-engine_search:
-  enable: false
-
-say:
-  api: https://el-bot-api.vercel.app/api/words/young
-  hitokoto:
-    enable: false
-
-#社交
-social:
-  - name: GitHub
-    link: https://github.com/coder-Song
-    icon: ri:github-line
-    color: "#6e5494"
-  - name: NeteaseMusic
-    link: https://music.163.com/#/user/home?id=8774966028
-    icon: ri:netease-cloud-music-line
-    color: "#C20C0C"
-  - name: E-Mail
-    link: sun.guogee@outlook.com
-    icon: ri:mail-line
-    color: "#8E71C1"
-
-
-
-iconify:
-  global: true
-
-medium_zoom: true
