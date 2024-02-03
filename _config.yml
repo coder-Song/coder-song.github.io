@@ -1,3 +1,10 @@
+# Deployment 博客部署
+## Docs: https://hexo.io/docs/deployment
+deploy:
+  type: git
+  repo: git@github.com:coder-Song/coder-song.github.io.git
+  branch: main
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
@@ -102,10 +109,7 @@ ignore:
 
 
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: ''
+
 
 
 
