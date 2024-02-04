@@ -5,8 +5,8 @@ avatar:
   url: images/rush.jpg
   status:
     enable: true
-    emoji: 🌑
-    message: Looking for dawn.
+    emoji: 
+    message: Looking for dawn
 
 # 打赏
 reward:
@@ -41,11 +41,12 @@ tags:
   CSS: '#5298d1'
   Node.js: '#026E00'
   Git: '#F14E32'
-  React: '#61dafb'
   Python: '#3776ab'
   PHP: '#8892BF'
   VS Code: '#0066B8'
+  Java: '#4fc08d'
   JavaScript: '#F4DF4F'
+  JetPack : '#61dafb'
   TypeScript: '#317AC6'
   Laravel: '#F4645F'
 

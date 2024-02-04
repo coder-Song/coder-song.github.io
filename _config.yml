@@ -1,9 +1,10 @@
 # Deployment 博客部署
-## Docs: https://hexo.io/docs/deployment
 deploy:
   type: git
-  repo: git@github.com:coder-Song/coder-song.github.io.git
-  branch: main
+  repo:
+    github: https://github.com/coder-Song/coder-song.github.io.git,main
+  message:
+  extend_dirs:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -18,7 +19,7 @@ theme: yun
 # Site
 title: Coder
 subtitle: ''
-description: 'coder-Song的博客'
+description: '每天进步一点点~~~'
 keywords:
 author: coder-Song
 language: zh-CN
@@ -53,7 +54,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true #生成存放图片的文件夹
 relative_link: false
 future: true
 highlight:
