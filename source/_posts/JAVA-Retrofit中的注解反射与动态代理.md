@@ -1,6 +1,12 @@
 ---
 title: JAVA基础|Retrofit中的注解反射与动态代理
+categories:
+- JAVA基础
+tags:
+- Retrofit 
+- JAVA
 ---
+
 
 ## Intent跳转参数解析
 ## Java静态代理与动态代理原理
@@ -23,6 +29,6 @@ title: JAVA基础|Retrofit中的注解反射与动态代理
 ??
 ```
 ## 代理模式类图
-
+{%asset_img 代理模式类图.png %}
 >代理模式：一种设计模式，一个类通过另一个类的实例来控制对该类的访问。
           这种方式可以提供额外的功能，例如权限控制、数据验证、缓存等。

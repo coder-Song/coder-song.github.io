@@ -1,31 +1,19 @@
-mode: auto #模式：dark
-
 #头像
 avatar:
-  url: images/rush.jpg
+  enable: true
+  url: /images/rush.jpg
+  rounded: true
+  opacity: 1
+  mickey_mouse: true #头像两边
   status:
     enable: true
-    emoji: 
-    message: Looking for dawn
-
-# 打赏
-reward:
-  enable: true
-  comment: 感谢您的 精准扶贫
-  methods:
-    - name: 微信
-      path: images/WeChat.jpg
-      color: "#2DC100"
-      icon: ri:wechat-pay-line
-    - name: 支付宝
-      path: images/Alipay.jpg
-      color: "#00A3EE"
-      icon: ri:alipay-line
+    emoji: 🙏
+    message: 恭喜发财
 
 #主题色
 colors:
   primary: '#6200ee'
- 
+
   #背景色
   bg: '#F5F5F5'
   selection_bg: '#8e71c1' # 选取文字时的背景色
@@ -34,9 +22,12 @@ colors:
   tag_start_color: '#F5F5F5'
   tag_end_color: '#6200ee'
 
-#标签色
+#标签
+wordcloud:
+  enable: true
 tags:
-  Vue: '#4fc08d'
+  JAVA: '#4fc08d'
+  Retrofit: '#4fc08d'
   Hexo: '#0E834D'
   CSS: '#5298d1'
   Node.js: '#026E00'
@@ -44,7 +35,6 @@ tags:
   Python: '#3776ab'
   PHP: '#8892BF'
   VS Code: '#0066B8'
-  Java: '#4fc08d'
   JavaScript: '#F4DF4F'
   JetPack : '#61dafb'
   TypeScript: '#317AC6'
@@ -53,34 +43,11 @@ tags:
 #分类颜色
 categories: #默认色 #333
   笔记: dimgray
+  JAVA基础: '#4fc08d'
 
-
-#头部资源-加载自定义资源
-head:
-  css:
-    custom: /css/custom.css
-
-  js:
-    base:
-      - xxx
-    async:
-      # 默认引入的图标资源，使用 iconfont
-      iconfont: //at.alicdn.com/t/font_1140697_dxory92pb0h.js
-    defer:
-  
-  #CDN    
-  cdn:
-    pre: https://cdn.jsdelivr.net/gh/coderSong/coder-song.github.io@latest
-    
-    #覆盖iconfont
-    js:
-      async:
-         iconfont: 
 
 #网站图标-放在source文件夹下
 favicon: /favicon.svg 
-
-
 
 # 预加载
 preload:
@@ -99,7 +66,6 @@ dns_prefetch:
 # do more(TCP handshake...) than dns-fetch
 preconnect:
   - https://cdn.jsdelivr.net
-
 
 comment:
   candidates:
@@ -145,25 +111,6 @@ giscus:
   emit-metadata: 0
   theme: light
 
-footer:
-  since: 2016
-  icon:
-    url: https://sponsors.coder-song.cn
-    title: coder-song的赞助者们
-  beian:
-    enable: true
-    icp: 苏ICP备17038157号
-  support:
-    enable: true
-    title: 又拍云
-    link: https://www.upyun.com
-    logo: https://cdn.yunyoujun.cn/img/logo/upyun-logo.png
-    prefix: 本网站由
-    suffix: 提供 CDN 加速
-  custom_text:
-
-
-
 # If you want to use it, you need config algolia appID in _config.yml!!!
 # https://github.com/oncletom/hexo-algolia
 
@@ -183,11 +130,6 @@ post_edit:
 albums:
   enable: true
 
-menu:
-  custom:
-    title: 留言板
-    path: /about/#comment
-    icon: ri:clipboard-line
 
 cursor:
   enable: true
@@ -199,7 +141,7 @@ google_tagmanager:
   id: GTM-M9KWR9L
 
 
-#社交
+#社交图标
 social:
   - name: GitHub
     link: https://github.com/coder-Song
@@ -217,13 +159,158 @@ social:
 #   enable: true
 
 
+# 首页-错落字体动画
+banner:
+  enable: true
+  title: #数组形式来分割 
+    -coder
+    -游
+    -乐
+    -园
+  border: true #左右边框
+  cloud: # 流动的云
+    enable: true
+    color: white
+  go_down: #向下箭头
+    enable: true
+    icon: ri:arrow-down-s-line
+
+# 公告
+notice:
+  enable: true
+  content:
+
+# UI-亮暗模式
+mode: auto #light/dark/time
+
+#图片背景
+bg_image:
+  enable: true
+  url: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-0-blur-30px.jpg
+  # dark:
+  # blur: 30px # 设置背景模糊程度
+  opacity: 0.8
+
+#搜索背景
+search:
+  modal: true
+  bg_image: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-2.jpg
+  dark_bg_image:  
+
+#随机多边形背景
+trianglify:
+  enable: false
+  cellSize: 75
+  width: 800
+  height: 600
+  palette: '["YlGnBu", "GnBu", "Purples", "Blues"]'
+  opacity: 0.5
+
+#烟花
+fireworks:
+  enable: true
+  colors:
+    - '102, 167, 221'
+    - '62, 131, 225'
+    - '33, 78, 194'
+
+#图片放大预览
+medium_zoom: true
+
+#卡片/图片滚动浮现
+scrollreveal:
+  enable: true
+  targets:
+    - .post-card
+    - .markdown-body img  
+
+#头部资源-加载自定义资源
+head:
+  css:
+    custom: /css/custom.css
+#字体
+    font:
+  cdn:
+    enable: true
+    pre: https://cdn.jsdelivr.net/gh/coderSong/coder-song.github.io@latest
+    lib:
+      - https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap
+  serif:
+    family: '''Songti SC'', ''Noto Serif SC'', STZhongsong, STKaiti, KaiTi, Roboto, serif'
+    weight: 900
+  sans_serif:
+    family: '''PingFang SC'', ''Microsoft YaHei'', Roboto, Arial, sans-serif'
+    weight: 400
+  monospace:
+    family: '''Source Code Pro'', ''Courier New'', Courier, Consolas, Monaco, monospace'
+  js:
+    base:
+      - xxx
+    async:
+      # 默认引入的图标资源，使用 iconfont
+      iconfont: //at.alicdn.com/t/font_1140697_dxory92pb0h.js
+    defer:
+
+    #覆盖iconfont
+    js:
+      async:
+         iconfont: 
+
 iconify:
   global: true
 
-medium_zoom: true
+#侧边栏-背景与标签
+sidebar:
+  bg_image: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-1.jpg
+  bg_position: bottom 3rem center
+  tagcloud:
+    enable: false
+    amount: 20
 
+#导航
+menu:
+  custom:
+    title: 留言板
+    path: /about/#comment
+    icon: ri:clipboard-line
+  home:
+    path: /
+    icon: ri:home-4-line
+  list:
+    - type: archives
+      path: /archives/
+      icon: ri:archive-line
+    - type: categories
+      path: /categories/
+      icon: ri:folder-2-line
+    - type: tags
+      path: /tags/
+      icon: ri:price-tag-3-line 
 
-#######页面配置########
+# 页面链接-
+pages :
+  - name: 我的小伙伴们
+    url: /links/
+    icon: ri:genderless-line
+    color: dodgerblue
+
+#文章
+post_card:
+  opacity: 0.8 #文章卡片透明度
+  types:
+  github:
+    color: black
+    icon: ri:github-line
+  notion:
+    color: black
+    icon: ri:notion
+post_meta:
+  item_text: false
+  created_at: true
+  updated_at: true
+  categories: true
+  tags: true
+
 # 目录显示
 toc:
   list_number: true #显示编号
@@ -232,8 +319,21 @@ toc:
   placeholder: 很遗憾，您还没开始动笔哦！ #占位符
   collapse: false  # 折叠-隐藏层级目录 
 
-
 # 编辑链接 
+
+# 打赏
+reward:
+  enable: true
+  comment: 感谢您的 精准扶贫
+  methods:
+    - name: 微信
+      path: images/WeChat.jpg
+      color: "#2DC100"
+      icon: ri:wechat-pay-line
+    - name: 支付宝
+      path: images/Alipay.jpg
+      color: "#00A3EE"
+      icon: ri:alipay-line
 
 # 代码高亮
 highlight:
@@ -259,3 +359,51 @@ creative_commons:
   language: deed.zh #设置语言
   post: true        #在每篇文章末尾显示
   clipboard: true   #在剪切板中追加版权信息
+
+#页脚
+footer:
+  since: 2022 #起始年份
+  icon: #年份名称中间图标
+    name: ri:cloud-line
+    animated: true
+    color: '#0078E7'
+    url: https://sponsors.coderSong.cn
+    title: coderSong的赞助者们
+  powered: #驱动
+    enable: true
+  support:
+    enable: true
+    title: 又拍云
+    link: https://www.upyun.com
+    logo: https://cdn.yunyoujun.cn/img/logo/upyun-logo.png
+    prefix: 本网站由
+    suffix: 提供 CDN 加速
+  custom_text: #自定义
+
+#随机话语
+say: 
+  enable: true
+  api: https://cdn.jsdelivr.net/gh/ElpsyCN/say@gh-pages/sentences.json
+  # https://developer.hitokoto.cn/sentence/
+  #默认使用一言
+  hitokoto:
+    enable: true
+    api: https://v1.hitokoto.cn
+
+#自定义图标
+icons:
+  # 返回顶部
+  back_to_top: ri:arrow-up-s-line
+  # 分类
+  category: ri:folder-2-line
+  # 标签
+  tag: ri:price-tag-3-line
+  # 拜访
+  view: ri:eye-line
+
+
+#默哀
+mourn:
+  enable: true
+  days:
+    - 12-13

@@ -54,7 +54,13 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: true #生成存放图片的文件夹
+
+ #启用存放图片的文件夹
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+
 relative_link: false
 future: true
 highlight:
