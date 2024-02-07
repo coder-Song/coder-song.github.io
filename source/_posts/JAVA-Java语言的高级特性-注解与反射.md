@@ -2,7 +2,9 @@
 title: JAVA基础|Java语言的高级特性-注解与反射
 
 categories:
-    - JAVA基础
+    - Android开发
+    - Java从入门到熟悉
+    
 tags:
     - 注解与反射
     - Retrofit 
@@ -58,7 +60,7 @@ public @interface Lance{
 ## 注解的应用场景
  根据注解的保留级别不同，注解的应用存在不同场景
 
-|级别|技术|说明|
+|级别|典型技术|说明|
 |---|---|---|
 |源码|APT|在编译期能够获取**注解与注解声明中的类**（包括类中所有的成员信息），一般用于生成额外的辅助类|
 |字节码|字节码增强|在编译出Class后，通过修改Class数据以实现代码逻辑目的。对于是否需要修改的区分或者修改为不同逻辑的判断可以使用注解。
@@ -68,4 +70,17 @@ public @interface Lance{
 
 {% asset_img APT注解类图.jpg %}
 
->Process过程会执行两次
+* Process过程会执行0`无数次（不一定），每一次都叫做一次**round** 
+* 至于执行几次的规律（还未学习）
+
+``` 
+//判断结束
+roundEnvironment.processingOver();
+
+//或者判断集合为空
+set.isEmpty();
+```
+### 字节码增强
+
+
+

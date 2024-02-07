@@ -1,7 +1,9 @@
 ---
 title: JAVA基础|Retrofit中的注解反射与动态代理
+
 categories:
-- JAVA基础
+    - Android开发
+    - Java从入门到熟悉
 tags:
 
 ---
